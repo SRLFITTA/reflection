@@ -1,0 +1,401 @@
+{ 207 Hooks Found By Cheddys Updater }
+
+const
+ReflectionRevision = '59';
+
+
+    {* BoundaryObject - 9 Hooks *}
+    BoundaryObject = 'ch';
+        BoundaryObject_AlternativeOrientation = 'm';
+        BoundaryObject_AlternativeOrientation_Multiplier = -819118419;
+        BoundaryObject_BackupRenderable = 'g';
+        BoundaryObject_Flags = 'o';
+        BoundaryObject_Flags_Multiplier = -502210369;
+        BoundaryObject_Hash = 'p';
+        BoundaryObject_Hash_Multiplier = 2052265757;
+        BoundaryObject_Orientation = 'w';
+        BoundaryObject_Orientation_Multiplier = -809690117;
+        BoundaryObject_Plane = 'k';
+        BoundaryObject_Plane_Multiplier = -1486221241;
+        BoundaryObject_Renderable = 'j';
+        BoundaryObject_Get_X = 'r';
+        BoundaryObject_Get_X_Multiplier = 1210170359;
+        BoundaryObject_Get_Y = 'y';
+        BoundaryObject_Get_Y_Multiplier = 1401870691;
+
+    {* Buffer - 2 Hooks *}
+    Buffer = 'de';
+        Buffer_Offset = 'r';
+        Buffer_Offset_Multiplier = 1617124369;
+        Buffer_Payload = 'k';
+
+    {* Cache - 5 Hooks *}
+    Cache = 'fz';
+        Cache_CacheableNode = 'k';
+        Cache_NodeHashTable = 'w';
+        Cache_Queue = 'm';
+        Cache_Remaining = 'y';
+        Cache_Remaining_Multiplier = 1;
+        Cache_Size = 'r';
+        Cache_Size_Multiplier = 1;
+
+    {* CacheableNode - 2 Hooks *}
+    CacheableNode = 'fj';
+        CacheableNode_Next = 'cr';
+        CacheableNode_Prev = 'cd';
+
+    {* Canvas - 1 Hooks *}
+    Canvas = 'dd';
+        Canvas_Component = 'k';
+
+    {* Actor - 17 Hooks *}
+    Actor = 'an';
+        Actor_Animation = 'ao';
+        Actor_Animation_Multiplier = 296689511;
+        Actor_CombatCycle = 'ad';
+        Actor_CombatCycle_Multiplier = 1195205775;
+        Actor_Health = 'af';
+        Actor_Health_Multiplier = 722959445;
+        Actor_HitCycles = 'as';
+        Actor_HitDamages = 'am';
+        Actor_HitTypes = 'ae';
+        Actor_Interacting = 'at';
+        Actor_Interacting_Multiplier = 1552651505;
+        Actor_MaxHealth = 'ab';
+        Actor_MaxHealth_Multiplier = -532478459;
+        Actor_Orientation = 'bj';
+        Actor_Orientation_Multiplier = 1018188061;
+        Actor_PathLength = 'by';
+        Actor_PathLength_Multiplier = 153678603;
+        Actor_PathTraversed = 'bt';
+        Actor_PathX = 'bg';
+        Actor_PathY = 'bm';
+        Actor_ActiveText = 'aq';
+        Actor_LocalX = 'e';
+        Actor_LocalX_Multiplier = 704794231;
+        Actor_LocalY = 'a';
+        Actor_LocalY_Multiplier = -759612205;
+        Actor_isInSequence = 'aj';
+
+    {* Client - 53 Hooks *}
+    Client = 'client';
+        Client_BaseX = 'cf.cw';
+        Client_BaseX_Multiplier = 787673155;
+        Client_BaseY = 'cr.cu';
+        Client_BaseY_Multiplier = -2026921865;
+        Client_CameraPitch = 'bi.fb';
+        Client_CameraPitch_Multiplier = -479031223;
+        Client_CameraX = 'client.fs';
+        Client_CameraX_Multiplier = 437628867;
+        Client_CameraY = 'ak.fr';
+        Client_CameraY_Multiplier = -1123306917;
+        Client_CameraYaw = 'gr.fv';
+        Client_CameraYaw_Multiplier = -436769289;
+        Client_CameraZ = 'el.fl';
+        Client_CameraZ_Multiplier = -403565165;
+        Client_Canvas = 'ci.pw';
+        Client_CollisionMaps = 'client.w';
+        Client_Run_Energy = 'client.jo';
+        Client_Run_Energy_Multiplier = -570678189;
+        Client_Experiences = 'client.hs';
+        Client_LoopCycle = 'client.i';
+        Client_LoopCycle_Multiplier = -1092411589;
+        Client_Login_State = 'client.u';
+        Client_Login_State_Multiplier = 2064132071;
+        Client_GroundItems = 'client.hg';
+        Client_ItemDefinitionCache = 'ab.w';
+        Client_ItemContainerTable = 's.k';
+        Client_Levels = 'client.hp';
+        Client_NPCs = 'client.bm';
+        Client_Player = 'h.hq';
+        Client_Players = 'client.gc';
+        Client_LoginState = 'ak.an';
+        Client_LoginState_Multiplier = 237103599;
+        Client_CompassAngle = 'client.fg';
+        Client_CompassAngle_Multiplier = 1654042681;
+        Client_Map_Offset = 'client.dy';
+        Client_Map_Offset_Multiplier = 217164645;
+        Client_Map_Scale = 'client.dj';
+        Client_Map_Scale_Multiplier = -1656813265;
+        Client_MenuActions = 'client.iy';
+        Client_MenuCount = 'client.aa';
+        Client_MenuCount_Multiplier = 54657429;
+        Client_MenuHeight = 'cc.il';
+        Client_MenuHeight_Multiplier = 1475787801;
+        Client_MenuOptions = 'client.ib';
+        Client_MenuWidth = 'client.iq';
+        Client_MenuWidth_Multiplier = 53963819;
+        Client_MenuX = 'af.hx';
+        Client_MenuX_Multiplier = -1914796849;
+        Client_MenuY = 'cb.hw';
+        Client_MenuY_Multiplier = -364129309;
+        Client_NPCDefinitionCache = 'aj.y';
+        Client_NPCIndices = 'client.bx';
+        Client_ObjectDefinitionCache = 'az.w';
+        Client_Password = 'ak.ax';
+        Client_Plane = 's.hv';
+        Client_Plane_Multiplier = 2117524171;
+        Client_RealLevels = 'client.hk';
+        Client_Region = 'd.do';
+        Client_Settings = 'eo.r';
+        Client_GroundHeights = 'j.k';
+        Client_GroundSettings = 'j.r';
+        Client_Username = 'ak.az';
+        Client_ValidWidgets = 'ei.r';
+        Client_Weight = 'client.jg';
+        Client_Weight_Multiplier = 847921335;
+        Client_WidgetBoundsHeight = 'client.lw';
+        Client_WidgetBoundsWidth = 'client.lq';
+        Client_WidgetBoundsX = 'client.lp';
+        Client_WidgetBoundsY = 'client.lj';
+        Client_WidgetNodeTable = 'client.jk';
+        Client_Widgets = 'en.k';
+        Client_WidgetSettings = 'eo.y';
+        Client_WidgetVarps = 'eo.y';
+        Client_isMenuOpen = 'client.hl';
+
+    {* CollisionMap - 1 Hooks *}
+    CollisionMap = 'ga';
+        CollisionMap_Flags = 'aw';
+
+    {* FloorDecorationObject - 6 Hooks *}
+    FloorDecorationObject = 'cf';
+        FloorDecorationObject_Flags = 'j';
+        FloorDecorationObject_Flags_Multiplier = 1711360093;
+        FloorDecorationObject_Hash = 'm';
+        FloorDecorationObject_Hash_Multiplier = -695201075;
+        FloorDecorationObject_Plane = 'k';
+        FloorDecorationObject_Plane_Multiplier = -875389279;
+        FloorDecorationObject_Renderable = 'w';
+        FloorDecorationObject_Get_X = 'r';
+        FloorDecorationObject_Get_X_Multiplier = 210733581;
+        FloorDecorationObject_Get_Y = 'y';
+        FloorDecorationObject_Get_Y_Multiplier = 1265744713;
+
+    {* NodeHashTable - 5 Hooks *}
+    NodeHashTable = 'fd';
+        NodeHashTable_Current = 'w';
+        NodeHashTable_CurrentIndex = 'm';
+        NodeHashTable_CurrentIndex_Multiplier = 1;
+        NodeHashTable_Head = 'y';
+        NodeHashTable_GetNodes = 'r';
+        NodeHashTable_GetSize = 'k';
+        NodeHashTable_GetSize_Multiplier = 1;
+
+    {* Item - 2 Hooks *}
+    Item = 'q';
+        Item_ID = 'k';
+        Item_ID_Multiplier = 1682086687;
+        Item_StackSize = 'r';
+        Item_StackSize_Multiplier = 1210858279;
+
+    {* ItemDefinition - 4 Hooks *}
+    ItemDefinition = 'ab';
+        ItemDefinition_GroundActions = 'f';
+        ItemDefinition_Name = 'b';
+        ItemDefinition_InventoryActions = 'q';
+        ItemDefinition_isMembers = 'c';
+
+    {* ItemContainer - 2 Hooks *}
+    ItemContainer = 's';
+        ItemContainer_IDs = 'r';
+        ItemContainer_StackSizes = 'y';
+
+    {* ItemLayer - 8 Hooks *}
+    ItemLayer = 'ci';
+        ItemLayer_BottomRenderable = 'w';
+        ItemLayer_Height = 'p';
+        ItemLayer_Height_Multiplier = 1735202963;
+        ItemLayer_ID = 'g';
+        ItemLayer_ID_Multiplier = 1983940829;
+        ItemLayer_MiddleRenderable = 'm';
+        ItemLayer_Plane = 'k';
+        ItemLayer_Plane_Multiplier = -1117706059;
+        ItemLayer_TopRenderable = 'j';
+        ItemLayer_X = 'r';
+        ItemLayer_X_Multiplier = 212577641;
+        ItemLayer_Y = 'y';
+        ItemLayer_Y_Multiplier = 13676537;
+
+    {* LinkedList - 2 Hooks *}
+    LinkedList = 'fi';
+        LinkedList_Head = 'k';
+        LinkedList_Tail = 'r';
+
+    {* Model - 12 Hooks *}
+    Model = 'cp';
+        Model_IndicesX = 'b';
+        Model_IndicesY = 'x';
+        Model_IndicesZ = 'n';
+        Model_TexturedIndicesX = 'd';
+        Model_TexturedIndicesY = 's';
+        Model_TexturedIndicesZ = 'v';
+        Model_TexturedVerticesX = 'b';
+        Model_TexturedVerticesY = 'x';
+        Model_TexturedVerticesZ = 'n';
+        Model_VerticesX = 'j';
+        Model_VerticesY = 'g';
+        Model_VerticesZ = 'p';
+
+    {* Node - 3 Hooks *}
+    Node = 'go';
+        Node_Next = 'ef';
+        Node_Previous = 'er';
+        Node_ID = 'dy';
+
+    {* NPC - 1 Hooks *}
+    NPC = 'aw';
+        NPC_Definition = 'k';
+
+    {* NPCDefinition - 7 Hooks *}
+    NPCDefinition = 'aj';
+        NPCDefinition_Actions = 'e';
+        NPCDefinition_Level = 'c';
+        NPCDefinition_Level_Multiplier = 1235631845;
+        NPCDefinition_ID = 'm';
+        NPCDefinition_ID_Multiplier = 318160851;
+        NPCDefinition_Name = 'j';
+        NPCDefinition_SettingID = 'av';
+        NPCDefinition_SettingID_Multiplier = -632881019;
+        NPCDefinition_TransformIDs = 'ai';
+        NPCDefinition_VarBitID = 'an';
+        NPCDefinition_VarBitID_Multiplier = 536366809;
+
+    {* ObjectDefinition - 2 Hooks *}
+    ObjectDefinition = 'az';
+        ObjectDefinition_Actions = 'al';
+        ObjectDefinition_Name = 'n';
+
+    {* Player - 3 Hooks *}
+    Player = 'y';
+        Player_CombatLevel = 'm';
+        Player_CombatLevel_Multiplier = 275292137;
+        Player_Model = 'd';
+        Player_Name = 'k';
+
+    {* Queue - 1 Hooks *}
+    Queue = 'fm';
+        Queue_Head = 'k';
+
+    {* Region - 2 Hooks *}
+    Region = 'cn';
+        Region_Objects = 'o';
+        Region_SceneTiles = 'j';
+
+    {* Renderable - 1 Hooks *}
+    Renderable = 'bx';
+        Renderable_ModelHeight = 'ch';
+        Renderable_ModelHeight_Multiplier = -977385459;
+
+    {* WorldObject - 12 Hooks *}
+    WorldObject = 'ck';
+        WorldObject_Flags = 's';
+        WorldObject_Flags_Multiplier = -481706441;
+        WorldObject_Height = 'r';
+        WorldObject_Height_Multiplier = -1125703737;
+        WorldObject_Hash = 'd';
+        WorldObject_Hash_Multiplier = -1206431167;
+        WorldObject_Orientation = 'm';
+        WorldObject_Orientation_Multiplier = -1030542201;
+        WorldObject_Plane = 'k';
+        WorldObject_Plane_Multiplier = 2093853645;
+        WorldObject_RelativeX = 'g';
+        WorldObject_RelativeX_Multiplier = -1597364385;
+        WorldObject_RelativeY = 'o';
+        WorldObject_RelativeY_Multiplier = 685933967;
+        WorldObject_Renderable = 'j';
+        WorldObject_SizeX = 'p';
+        WorldObject_SizeX_Multiplier = 895506901;
+        WorldObject_SizeY = 'b';
+        WorldObject_SizeY_Multiplier = 967160897;
+        WorldObject_Get_X = 'y';
+        WorldObject_Get_X_Multiplier = -390074187;
+        WorldObject_Get_Y = 'w';
+        WorldObject_Get_Y_Multiplier = -1184474629;
+
+    {* SceneTile - 8 Hooks *}
+    SceneTile = 'cb';
+        SceneTile_BoundaryObject = 'g';
+        SceneTile_FloorDecorationObject = 'o';
+        SceneTile_ItemLayer = 'b';
+        SceneTile_Plane = 'w';
+        SceneTile_Plane_Multiplier = -856405677;
+        SceneTile_WorldObjects = 'n';
+        SceneTile_WallObject = 'p';
+        SceneTile_X = 'r';
+        SceneTile_X_Multiplier = -1289280687;
+        SceneTile_Y = 'y';
+        SceneTile_Y_Multiplier = 693691307;
+
+    {* WallObject - 11 Hooks *}
+    WallObject = 'ca';
+        WallObject_BackupRenderable = 'o';
+        WallObject_Flags = 'x';
+        WallObject_Flags_Multiplier = 2099554427;
+        WallObject_Height = 'm';
+        WallObject_Height_Multiplier = -266248503;
+        WallObject_Hash = 'b';
+        WallObject_Hash_Multiplier = 723969563;
+        WallObject_Orientation = 'w';
+        WallObject_Orientation_Multiplier = -273230309;
+        WallObject_Plane = 'k';
+        WallObject_Plane_Multiplier = 1785789031;
+        WallObject_RelativeX = 'j';
+        WallObject_RelativeX_Multiplier = 154961493;
+        WallObject_RelativeY = 'g';
+        WallObject_RelativeY_Multiplier = -1144849677;
+        WallObject_Renderable = 'p';
+        WallObject_X = 'r';
+        WallObject_X_Multiplier = 1038229795;
+        WallObject_Y = 'y';
+        WallObject_Y_Multiplier = -1388658969;
+
+    {* Widget - 24 Hooks *}
+    Widget = 'en';
+        Widget_GetActions = 'bi';
+        Widget_BorderThickness = 'am';
+        Widget_BorderThickness_Multiplier = 928110287;
+        Widget_BoundsIndex = 'dz';
+        Widget_BoundsIndex_Multiplier = 1011007915;
+        Widget_Children = 'di';
+        Widget_GetItems = 'db';
+        Widget_Height = 'a';
+        Widget_Height_Multiplier = 1486275607;
+        Widget_GetID = 's';
+        Widget_GetID_Multiplier = 275386787;
+        Widget_GetIndex = 'v';
+        Widget_GetIndex_Multiplier = 1117261515;
+        Widget_ItemID = 'dr';
+        Widget_ItemID_Multiplier = -1655628037;
+        Widget_LoopCycleStatus = 'dj';
+        Widget_LoopCycleStatus_Multiplier = 843259955;
+        Widget_Name = 'bp';
+        Widget_GetRelativeX = 'y';
+        Widget_GetRelativeX_Multiplier = 219780081;
+        Widget_GetRelativeY = 'h';
+        Widget_GetRelativeY_Multiplier = 1724903883;
+        Widget_Root = 'by';
+        Widget_RootID = 'c';
+        Widget_RootID_Multiplier = 396507425;
+        Widget_ScrollX = 'q';
+        Widget_ScrollX_Multiplier = 759718085;
+        Widget_ScrollY = 'z';
+        Widget_ScrollY_Multiplier = -631678375;
+        Widget_SpriteID = 'null';
+        Widget_StackSize = 'dk';
+        Widget_StackSize_Multiplier = 1236267309;
+        Widget_GetStackSizes = 'do';
+        Widget_GetText = 'bo';
+        Widget_GetTextureID = 'null';
+        Widget_Width = 'e';
+        Widget_Width_Multiplier = 821762893;
+        Widget_X = 'i';
+        Widget_X_Multiplier = -136421911;
+        Widget_Y = 'x';
+        Widget_Y_Multiplier = 2130533229;
+        Widget_isHidden = 'f';
+
+    {* WidgetNode - 1 Hooks *}
+    WidgetNode = 'w';
+        WidgetNode_ID = 'k';
+        WidgetNode_ID_Multiplier = 448983669;
