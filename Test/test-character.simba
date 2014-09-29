@@ -1,0 +1,35 @@
+Procedure test_PlayerRecord;
+var
+  CurP: TPlayer;
+begin
+  CurP := r_MyPlayer;
+  Writeln('Name: ' + CurP.Name);
+  Writeln('Tile: ' + ToStr(CurP.Tile));
+  Writeln('Index: ' + ToStr(CurP.Index));
+  Writeln('Animation: ' + ToStr(CurP.Animation));
+  Writeln('Interacting: ' + ToStr(CurP.Interacting));
+end;
+
+Procedure test_PlayersRecord;
+var
+  Ppls: TPlayerArray;
+  I: Integer;
+begin
+  Ppls := r_GetPlayers;
+  For I:=0 to High(PPls)do
+    Writeln('Name: ' + PPls[I].Name + ' / Tile: ' + ToStr(PPls[I].Tile) + ' / Index: ' + ToStr(PPls[I].Index) + ' / Animation: ' + ToStr(PPls[I].Animation) + ' / Interacting: ' + ToStr(PPls[I].Interacting));
+end;
+
+Procedure test_NPCs;
+var
+  NPCs: TNPCArray;
+begin
+  NPCs := r_GetAllNPCs;
+  Writeln(r_GetAllNPCs);
+end;
+
+Procedure test_WholeChar;
+begin
+  test_PlayersRecord;
+  test_NPCs;
+end;

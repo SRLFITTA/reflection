@@ -1,0 +1,44 @@
+function R_GetRunEnergy: integer;
+begin
+  Result := SmartGetFieldInt(SmartCurrentTarget, 0, client_run_energy) * client_run_energy_Multiplier ;
+end;
+
+function R_IsAutoRetaliateOn: Boolean;
+begin
+  Result := R_GetSetting(172) = 0;
+end;
+
+function R_IsRunOn: Boolean;
+begin
+  Result := R_GetSetting(173) = 1;
+end;
+
+function R_IsPoisoned: Boolean;
+begin
+  Result := R_GetSetting(102) > 0;
+end;
+
+function R_AutoCasting: Boolean;
+begin
+  Result := R_GetSetting(108) > 0;
+end;
+
+function R_GetSpecPercent: Integer;
+begin
+  Result := R_GetSetting(300) / 10;
+end;
+
+function R_GetWeight: Integer;
+begin
+  Result := (SmartGetFieldInt(SmartCurrentTarget, 0, client_weight) * client_weight_Multiplier);
+end;
+
+function R_GetLoginState: Integer;
+begin
+  Result := (SmartGetFieldInt(SmartCurrentTarget, 0, client_login_state) * client_login_state_Multiplier);
+end;
+
+function R_GetPlane: Integer;
+begin
+  Result := (SmartGetFieldInt(SmartCurrentTarget, 0, client_plane) * client_plane_Multiplier);
+end;

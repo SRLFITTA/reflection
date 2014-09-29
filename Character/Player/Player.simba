@@ -1,0 +1,108 @@
+  Type TPlayer = Record
+    Name: String;
+    Tile: TPoint;
+    Index: Integer;
+    Animation: Integer;
+    Interacting: Integer;
+  end;
+  TPlayerArray = Array of TPlayer;
+
+
+function r_MyPlayer: TPlayer;
+var
+  me: Integer;
+begin
+  me := SmartGetFieldObject(SmartCurrentTarget, 0, client_player);
+  with Result do
+  begin
+    Name := R_GetJavaString(SmartGetFieldObject(SmartCurrentTarget, Me, Player_name), 512);
+    Tile := Point((SmartGetFieldInt(SmartCurrentTarget, 0, client_baseX) * client_baseX_Multiplier) + (SmartGetFieldInt(SmartCurrentTarget, Me, Actor_localX) * Actor_localX_Multiplier) div 128, (SmartGetFieldInt(SmartCurrentTarget, 0, client_baseY) * client_baseY_Multiplier) + (SmartGetFieldInt(SmartCurrentTarget, Me, Actor_localY) * Actor_localY_Multiplier) div 128);
+    Index := (SmartGetFieldInt(SmartCurrentTarget, 0, Client_PlayerIndex) * Client_PlayerIndex_Multiplier) + 32768;
+    Animation := SmartGetFieldInt(SmartCurrentTarget, me, Actor_animation)  * Actor_animation_Multiplier;
+    Interacting := SmartGetFieldInt(SmartCurrentTarget, me, Actor_interacting) * Actor_interacting_Multiplier;
+  end;
+  SmartFreeObject(SmartCurrentTarget, me);
+end;
+
+
+function r_GetPlayers: TPlayerArray;
+var
+  PlayerNode: integer;
+  I, K: Integer;
+begin
+  for i := 0 to 32767 do
+  begin
+    PlayerNode := SmartGetFieldArrayObject(SmartCurrentTarget, 0, client_Players, i);
+    if PlayerNode = 0 then
+    begin
+      SmartFreeObject(SmartCurrentTarget, PlayerNode);
+      continue;
+    end;
+    Setlength(Result, (k + 1));
+    with Result[k] do
+    begin
+      Name := R_GetJavaString(SmartGetFieldObject(SmartCurrentTarget, PlayerNode, Player_name), 512);
+      Tile := Point((SmartGetFieldInt(SmartCurrentTarget, 0, client_baseX) * client_baseX_Multiplier) + (SmartGetFieldInt(SmartCurrentTarget, PlayerNode, Actor_localX) * Actor_localX_Multiplier) div 128, (SmartGetFieldInt(SmartCurrentTarget, 0, client_baseY) * client_baseY_Multiplier) + (SmartGetFieldInt(SmartCurrentTarget, PlayerNode, Actor_localY) * Actor_localY_Multiplier) div 128);
+      Index := i + 32768;
+      Animation := SmartGetFieldInt(SmartCurrentTarget, PlayerNode, Actor_animation)  * Actor_animation_Multiplier;
+      Interacting := SmartGetFieldInt(SmartCurrentTarget, PlayerNode, Actor_interacting) * Actor_interacting_Multiplier;
+    end;
+    inc(k);
+    SmartFreeObject(SmartCurrentTarget, PlayerNode);
+  end;
+end;
+
+function R_GetPlayerName: String;
+var
+  _Player, _PlayerName: Integer;
+begin
+  _Player := SmartGetFieldObject(SmartCurrentTarget, 0, client_player);
+  _PlayerName := SmartGetFieldObject(SmartCurrentTarget, _Player, Player_name);
+  Result := R_GetJavaString(_PlayerName, 512);
+  SmartFreeObject(SmartCurrentTarget, _PlayerName);
+  SmartFreeObject(SmartCurrentTarget, _Player);
+end;
+
+function R_GetAnimation: Integer;
+var
+  Me: Integer;
+begin
+  Me := SmartGetFieldObject(SmartCurrentTarget, 0, client_player);
+  Result := SmartGetFieldInt(SmartCurrentTarget, me, Actor_animation)  * Actor_animation_Multiplier;
+  SmartFreeObject(SmartCurrentTarget, Me);
+end;
+
+function R_IsAnimating: Boolean;
+begin
+  Result := R_GetAnimation > - 1;
+end;
+
+function R_GetPlayerIndex: Integer;
+begin
+  Result := (SmartGetFieldInt(SmartCurrentTarget, 0, Client_PlayerIndex) * Client_PlayerIndex_Multiplier) + 32768;
+end;
+
+function R_WaitForAnimation(timeout: integer): boolean;
+var
+  t: integer;
+begin
+  Result := false;
+  MarkTime(t);
+  while R_GetAnimation = - 1 do
+  begin
+  wait(500);
+    if (TimeFromMark(t) >= timeout) then
+      Exit;
+  end;
+  Result := true;
+end;
+
+function R_InFight: Boolean;
+begin
+  result := (R_GetActorLoopCycle > R_GetClientLoopCycle) or (Round(R_InteractingNpc().Hitpoints) > 0);
+end;
+
+function R_UnderAttack: Boolean;
+begin
+  result := (R_GetActorLoopCycle > R_GetClientLoopCycle);
+end;

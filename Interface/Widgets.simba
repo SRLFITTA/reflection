@@ -1,0 +1,13 @@
+function R_GetWidget(Index, ChildIndex: Integer): Integer;
+begin
+  Result := SmartGetFieldArray2DObject(SmartCurrentTarget, 0, client_widgets, Index, ChildIndex);
+end;
+
+function R_GetWidgetText(WidgetPointer: Integer): String;
+var
+  Text: Integer;
+begin
+  Text := SmartGetFieldObject(SmartCurrentTarget, WidgetPointer, Widget_getText);
+  Result := Trim(R_GetJavaString(Text, 1024));
+  SmartFreeObject(SmartCurrentTarget, Text);
+end;

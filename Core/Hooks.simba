@@ -1,8 +1,5 @@
-{ 207 Hooks Found By Cheddys Updater }
-
 const
-ReflectionRevision = '59';
-
+  Client_Rev = '59';
 
     {* BoundaryObject - 9 Hooks *}
     BoundaryObject = 'ch';
@@ -79,22 +76,26 @@ ReflectionRevision = '59';
 
     {* Client - 53 Hooks *}
     Client = 'client';
+
         Client_BaseX = 'cf.cw';
         Client_BaseX_Multiplier = 787673155;
         Client_BaseY = 'cr.cu';
         Client_BaseY_Multiplier = -2026921865;
+
         Client_CameraPitch = 'bi.fb';
         Client_CameraPitch_Multiplier = -479031223;
+
         Client_CameraX = 'client.fs';
         Client_CameraX_Multiplier = 437628867;
         Client_CameraY = 'ak.fr';
         Client_CameraY_Multiplier = -1123306917;
+
         Client_CameraYaw = 'gr.fv';
         Client_CameraYaw_Multiplier = -436769289;
+
         Client_CameraZ = 'el.fl';
         Client_CameraZ_Multiplier = -403565165;
-        Client_Canvas = 'ci.pw';
-        Client_CollisionMaps = 'client.w';
+
         Client_Run_Energy = 'client.jo';
         Client_Run_Energy_Multiplier = -570678189;
         Client_Experiences = 'client.hs';
@@ -108,6 +109,8 @@ ReflectionRevision = '59';
         Client_Levels = 'client.hp';
         Client_NPCs = 'client.bm';
         Client_Player = 'h.hq';
+        Client_PlayerIndex = 'client.hn';
+        Client_PlayerIndex_Multiplier = 1549291559;
         Client_Players = 'client.gc';
         Client_LoginState = 'ak.an';
         Client_LoginState_Multiplier = 237103599;

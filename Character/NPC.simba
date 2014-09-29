@@ -1,14 +1,7 @@
-{* Reflection Npc Functions
-
-   This Contains all the current reflection functions relating to Npc's.
-
-
-
-*}
   Type TNPC = Record
     Name, OverHeadText: String;
     Tile: TPoint;
-    Index, Level, NpcID: Integer;
+    Index, Level, NPCid: Integer;
     Animation, HitPoints: Integer;
     Interacting: Integer;
     InCombat: Boolean;

@@ -1,11 +1,37 @@
+{
+   Engine handling
+}
 {$include SRL-OSR/SRL/Reflection/Core/Hooks.simba}
-{$include SRL-OSR/SRL/Reflection/Core/Misc.simba}
+{$include SRL-OSR/SRL/Reflection/Core/Core.simba}
+{$include SRL-OSR/SRL/Reflection/Core/Menu.simba}
 {$include SRL-OSR/SRL/Reflection/Core/Tiles.simba}
 {$include SRL-OSR/SRL/Reflection/Core/MapWalk.simba}
-{$include SRL-OSR/SRL/Reflection/Core/Npc.simba}
-{$include SRL-OSR/SRL/Reflection/Core/Player.simba}
+
+{
+  Character handling
+}
+{$include SRL-OSR/SRL/Reflection/Character/Npc.simba}
+{$include SRL-OSR/SRL/Reflection/Character/Player/Player.simba}
+{$include SRL-OSR/SRL/Reflection/Character/Player/Settings.simba}
+{$include SRL-OSR/SRL/Reflection/Character/Player/Levels.simba}
+
+{
+  Interface handling
+}
+{$include SRL-OSR/SRL/Reflection/Interface/Widgets.simba}
+{$include SRL-OSR/SRL/Reflection/Interface/Inventory.simba}
+
+{
+  Objects handling
+}
 {$include SRL-OSR/SRL/Reflection/Core/Objects.simba}
+
+{
+  Grounditem handling
+}
 {$include SRL-OSR/SRL/Reflection/Core/GroundItems.simba}
+
+{
+  Interaction handling
+}
 {$include SRL-OSR/SRL/Reflection/Core/Interaction.simba}
-{$include SRL-OSR/SRL/Reflection/Core/Widgets.simba}
-{$include SRL-OSR/SRL/Reflection/AntiRandoms/AntiRandoms.simba}
